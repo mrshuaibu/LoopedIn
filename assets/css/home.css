@@ -22,7 +22,7 @@ html {
 }
 
 .container {
-    width: min(100% - 30px, 1080px);
+    width: min(100% - 30px, 1200px);
     margin-inline: auto;
 }
 
@@ -148,7 +148,7 @@ body {
 }
 
 h1 {
-    color: var(--app-font-color1);
+    color: #007bff;
     line-height: 80px;
     font-size: 28px;
     font-weight: 600;
@@ -219,7 +219,11 @@ main {
     padding: 20px;
     width: 25%;
     border-radius: 6px;
-    height: 50%;
+    height: 55%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .feed {
@@ -237,22 +241,125 @@ main {
     border-radius: 6px;
 }
 
-@media (max-width: 768px) {
-    .profile-info {
-        display: none;
-    }
+/***********************************/
+/*Profile details*/
+/***********************************/
 
-    .feed {
-        width: 100%;
-    }
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
-    .suggestions {
-        display: none;
-    }
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-details {
+    text-align: left;
+}
+
+.user-name {
+    font-size: 24px;
+    text-align: center;
+}
+
+.connections {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.followers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.folowers-text {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.followers-num {
+    font-size: 17px;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.connections-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.connections-text {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.connections-numbers {
+    font-size: 17px;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.phone-info {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.location-icon {
+    color: #ff0000;
+    padding-right: 5px;
+
+}
+
+.phone-icon {
+    color: #25d366;
+
+}
+
+.email-info {
+    cursor: pointer;
+}
+
+.email-icon {
+    color: #6c757d;
+}
+
+.website {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.website-icon {
+    color: #17A2B8;
+    padding-right: 2px;
 }
 
 /***********************************/
-/* Input Area */
+/* feed */
 /***********************************/
 
 .input-area {
@@ -262,6 +369,7 @@ main {
     width: 100%;
     background-color: var(--feed-bg-color);
     border-radius: 6px;
+    padding: 0 10px;
 }
 
 .text-area {
@@ -279,16 +387,6 @@ main {
 }
 
 .post-upload {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.post-upload {
     gap: 10px;
     height: 40px;
     background-color: var(--feed-bg-color);
@@ -296,6 +394,7 @@ main {
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .upload-input {
@@ -308,7 +407,7 @@ main {
 }
 
 .upload-icon {
-    font-size: 25px;
+    font-size: 17px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -319,10 +418,9 @@ main {
 .post-button {
     color: #fff;
     background-color: #007bff;
-    height: 60%;
-    width: 60px;
     border-radius: 6px;
     margin-right: 10px;
+    padding: 10px 20px;
 }
 
 .post-button:hover {
@@ -332,7 +430,7 @@ main {
 .post {
     margin-top: 20px;
     background-color: #fff;
-    padding: 10px;
+    padding: 20px;
 }
 
 .post-header {
@@ -345,7 +443,7 @@ main {
     height: 50px;
     border-radius: 50%;
     object-fit: cover; 
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .post-info {
@@ -374,7 +472,21 @@ main {
 }
 
 .warning-text {
-    color: red;
+    color: rgb(255, 0, 0);
+}
+
+@media (max-width: 768px) {
+    .profile-info {
+        display: none;
+    }
+
+    .feed {
+        width: 100%;
+    }
+
+    .suggestions {
+        display: none;
+    }
 }
 
 /***********************************/

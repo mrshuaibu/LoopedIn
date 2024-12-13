@@ -35,7 +35,7 @@ document.querySelector('.post-button').addEventListener('click', () => {
     const postHeader = document.createElement('div');
     postHeader.classList.add('post-header');
     postHeader.innerHTML = `
-        <img src="./assets/img/favicon.jpg" 
+        <img src="./assets/img/man.jpg" 
         alt="profile picture" 
         class="post-profile-pic"
         >
