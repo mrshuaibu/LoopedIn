@@ -16,6 +16,9 @@ html {
     --app-font-color1: #000;
     --app-font-color2: #fff;
     --app-font-hover: #bacadc;
+    --feed-bg-color: #fff;
+    --feed-text-color: #000;
+    --feed-border-color: #000;
 }
 
 .container {
@@ -67,7 +70,7 @@ body {
     font-size: 17px;
 }
 
-.nav-list li a{
+.nav-list li a {
     text-decoration: none;
     color: var(--app-font-color1);
 }
@@ -105,7 +108,7 @@ body {
         text-align: center;
         transition: left 0.3s ease-in-out;
         z-index: 1000;
-    }  
+    }
 
     .nav-item {
         margin: 5px 0;
@@ -170,10 +173,11 @@ main {
 }
 
 .feed {
-    background-color: blue;
-    padding: 20px;
+    color: var(--feed-text-color);
     width: 45%;
     border-radius: 6px;
+    max-height: 100vh; 
+    overflow-y: auto;
 }
 
 .suggestions {
@@ -184,7 +188,133 @@ main {
 }
 
 /***********************************/
-/* Footer*/
+/* Input Area */
+/***********************************/
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--feed-bg-color);
+    border-radius: 6px;
+}
+
+.text-area {
+    width: 100%;
+    height: 100px; 
+    border: none;
+    border-bottom: 1px solid var(--feed-border-color);
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--feed-text-color);
+    background-color: var(--feed-bg-color);
+    outline: none;
+    resize: none; 
+}
+
+.post-upload {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.post-upload {
+    gap: 10px;
+    height: 40px;
+    background-color: var(--feed-bg-color);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.upload-input {
+    display: none;
+}
+
+.upload-container {
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.upload-icon {
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.post-button {
+    color: #fff;
+    background-color: #007bff;
+    height: 60%;
+    width: 60px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.post-button:hover {
+    background-color: #0056b3;
+}
+
+.post {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.post-profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; 
+    margin-right: 20px;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-user-name {
+    font-weight: 600;
+}
+
+.post-date {
+    font-size: 15px;
+    color: #888;
+}
+
+.post-text {
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.post-image {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.warning-text {
+    color: red;
+}
+
+/***********************************/
+/* Footer */
 /***********************************/
 
 footer {
