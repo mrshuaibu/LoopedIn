@@ -22,7 +22,9 @@ document.querySelector('.post-button').addEventListener('click', () => {
     if (!postText && !postImageFile) {
         if (warningText) {
             warningText.style.display = 'block';
-            warningText.textContent = 'Please enter some text or upload an image to post!';
+            warningText.textContent = `
+            Please enter some text or upload an image to post!
+            `;
         }
         return;
     }
@@ -33,7 +35,10 @@ document.querySelector('.post-button').addEventListener('click', () => {
     const postHeader = document.createElement('div');
     postHeader.classList.add('post-header');
     postHeader.innerHTML = `
-        <img src="./assets/img/favicon.jpg" alt="profile picture" class="post-profile-pic">
+        <img src="./assets/img/favicon.jpg" 
+        alt="profile picture" 
+        class="post-profile-pic"
+        >
         <div class="post-info">
             <span class="post-user-name">Michael</span>
             <span class="post-date">${new Date().toLocaleString()}</span>

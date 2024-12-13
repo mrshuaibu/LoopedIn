@@ -43,11 +43,6 @@ body {
 /***********************************/
 /* Header*/
 /***********************************/
-.menu-icon {
-    display: none;
-    line-height: 80px;
-}
-
 .bar {
     display: block;
     width: 25px;
@@ -80,22 +75,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-
-    .menu-icon.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-icon.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .menu-icon.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
     .nav-list {
         position: fixed;
         left: -100%;
@@ -138,7 +117,7 @@ h1 {
     border-radius: 50px;
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; 
     align-items: center;
     text-align: center;
 }
@@ -185,6 +164,20 @@ main {
     padding: 20px;
     width: 25%;
     border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .profile-info {
+        display: none;
+    }
+
+    .feed {
+        width: 100%;
+    }
+
+    .suggestions {
+        display: none;
+    }
 }
 
 /***********************************/
