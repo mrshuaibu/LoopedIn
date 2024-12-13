@@ -65,8 +65,17 @@ body {
 
 .login-form {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px; 
     text-align: center;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+}
+
+.login-form h2 {
+    font-size: 30px;
+    margin-bottom: 16px;
+    color: #333;
 }
 
 .login-form p {
@@ -82,20 +91,14 @@ body {
     opacity: 1;
 }
 
-.login-form h2 {
-    font-size: 40px;
-    margin-bottom: 32px;
-    color: #333;
-}
-
 .form-group {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .form-group input {
     width: 100%;
-    padding: 16px;
-    font-size: 20px;
+    padding: 12px;
+    font-size: 18px; 
     border: 1px solid #ddd;
     border-radius: 5px;
     outline: none;
@@ -108,13 +111,13 @@ body {
 
 .form-buttons {
     display: flex;
-    gap: 24px;
+    gap: 16px;
 }
 
 .btn {
     flex: 1;
-    padding: 16px;
-    font-size: 20px;
+    padding: 12px;
+    font-size: 18px; 
     border-radius: 5px;
     border: none;
     cursor: pointer;
@@ -137,4 +140,63 @@ body {
 
 .btn-signup:hover {
     background-color: #bbb;
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-page {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .welcome-left::before {
+        display: none;
+    }
+
+    .welcome-right {
+        flex: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('../img/bannerimg.jpg') no-repeat center center/cover;
+        background-size: cover;
+    }
+
+    .login-form {
+        width: 90%;
+        max-width: 350px;
+        padding: 32px;
+        background: rgb(255 255 255 / 0.7); 
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0 0 0 / 0.1);
+        position: relative;
+    }
+
+    .login-form h2 {
+        font-size: 28px;
+        margin-top: 0; 
+        color: #000;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-size: 30px;
+        font-weight: 700;
+        text-shadow: 0 2px 5px rgb(0 0 0 / 0.5);
+        z-index: 2;
+    }
+
+    .login-form p {
+        text-align: center;
+        font-size: 16px;
+    }
 }
