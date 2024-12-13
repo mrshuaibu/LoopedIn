@@ -172,6 +172,32 @@ h1 {
     border-radius: 50px;
 }
 
+@media (max-width: 768px) {
+    .search-bar {
+        width: 100%; 
+        padding: 8px;
+        margin-left: 40px;
+    }
+
+    .search-input {
+        padding: 4px 8px;
+    }
+
+    .search-bar input {
+        width: 100%; 
+        font-size: 14px;
+    }
+
+    .search-bar button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .profile {
+        width: 70px;
+    }
+}
+
 /***********************************/
 /*Main*/
 /***********************************/
@@ -189,10 +215,11 @@ main {
 }
 
 .profile-info {
-    background-color: yellow;
+    background-color: #fff;
     padding: 20px;
     width: 25%;
     border-radius: 6px;
+    height: 50%;
 }
 
 .feed {
@@ -204,7 +231,7 @@ main {
 }
 
 .suggestions {
-    background-color: red;
+    background-color: #fff;
     padding: 20px;
     width: 25%;
     border-radius: 6px;
