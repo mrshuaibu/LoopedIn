@@ -3,7 +3,7 @@
 const loginForm = document.querySelector('.login-form');
 const usernameInput = document.querySelector('.form-group input[type="text"]');
 const passwordInput = document.querySelector('.form-group input[type="password"]');
-const errorMessage = document.querySelector('.login-form p'); 
+const errorMessage = document.querySelector('.error p'); 
 
 localStorage.setItem('username', 'meet_michael');
 localStorage.setItem('password', 'password123');
