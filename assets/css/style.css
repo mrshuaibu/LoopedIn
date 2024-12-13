@@ -47,7 +47,7 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    color: white;
+    color: #fff;
     font-size: 30px;
     font-weight: 700;
     text-shadow: 0 2px 5px rgb(0 0 0 / 0.5);
@@ -56,7 +56,7 @@ body {
 
 .welcome-right {
     flex: 1;
-    background: white;
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +67,19 @@ body {
     width: 100%;
     max-width: 400px;
     text-align: center;
+}
+
+.login-form p {
+    visibility: hidden; 
+    height: 24px;
+    margin-top: 16px;
+    color: red;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+}
+
+.login-form p.visible {
+    visibility: visible;
+    opacity: 1;
 }
 
 .login-form h2 {
@@ -110,7 +123,7 @@ body {
 
 .btn-login {
     background-color: #007bff;
-    color: white;
+    color: #fff;
 }
 
 .btn-login:hover {
