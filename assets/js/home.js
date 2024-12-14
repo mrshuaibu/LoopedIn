@@ -1,5 +1,32 @@
 'use strict';
 
+const profilePic = document.getElementById('profilePic');
+const dropdownMenu = document.getElementById('dropdownMenu');
+const profile = document.querySelector('.profile');
+
+profilePic.addEventListener('click', function (event) {
+    profile.classList.toggle('active');
+    // Prevent click from propagating to the document body
+    event.stopPropagation();
+});
+
+const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+dropdownLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        profile.classList.remove('active');
+    });
+});
+
+window.addEventListener('scroll', function () {
+    profile.classList.remove('active');
+});
+
+document.addEventListener('click', function (event) {
+    if (!profile.contains(event.target)) {
+        profile.classList.remove('active');
+    }
+});
+
 document.querySelector('#fileUpload').addEventListener('change', (event) => {
     const fileNameElement = document.querySelector('#fileName');
     const file = event.target.files[0];
