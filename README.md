@@ -29,8 +29,11 @@ To access the platform, use the following credentials:
 
 ## Screenshot
 
-<img src="./assets/img/loginpage.png" width="300">
-<img src="./assets/img/homepage.png" width="300">
+<div style="display: flex; justify-content: space-between;">
+  <img src="./assets/img/loginpage.png" width="300">
+  <img src="./assets/img/homepage.png" width="300">
+</div>
+
 
 ---
 
