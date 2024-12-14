@@ -79,6 +79,10 @@ body {
     text-align: center;
 }
 
+.looped-in {
+    color: #007bff;
+}
+
 .login-form h2 {
     font-size: 40px;
     margin-bottom: 16px;
@@ -187,15 +191,18 @@ body {
     flex-direction: column;
     gap: 10px;
 }
+
 .btn-google {
     background-color: #db4437;
     color: #fff;
     padding-right: 40px;
 }
+
 .btn-facebook {
     background-color: #3b5998;
     color: #fff;
 }
+
 .btn-google:hover, .btn-facebook:hover {
     opacity: 0.9;
 }
@@ -205,10 +212,12 @@ body {
     color: #999;
     margin-top: 20px;
 }
+
 .terms a {
     color: #007bff;
     text-decoration: none;
 }
+
 .terms a:hover {
     text-decoration: underline;
 }
@@ -221,6 +230,10 @@ body {
     .welcome-page {
         flex-direction: column;
         height: 100%;
+    }
+
+    .welcome-text {
+        display: none;
     }
 
     .welcome-left::before {
@@ -242,7 +255,7 @@ body {
         width: 90%;
         max-width: 350px;
         padding: 32px;
-        background: rgb(255 255 255 / 0.7); 
+        background: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
         position: relative;
@@ -255,19 +268,18 @@ body {
     }
 
     .overlay {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        color: #fff;
-        font-size: 30px;
-        font-weight: 700;
-        text-shadow: 0 2px 5px rgb(0 0 0 / 0.5);
-        z-index: 2;
+        display: none;
     }
 
     .login-form p {
         text-align: center;
         font-size: 16px;
+    }
+
+    .social-login {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }
