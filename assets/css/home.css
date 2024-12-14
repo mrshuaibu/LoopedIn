@@ -234,11 +234,13 @@ main {
     overflow-y: auto;
 }
 
-.suggestions {
-    background-color: #fff;
+.suggestion {
     padding: 20px;
-    width: 25%;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 6px;
+    max-height: 100%; 
+    width: 25%;
 }
 
 /***********************************/
@@ -356,6 +358,54 @@ main {
 .website-icon {
     color: #17A2B8;
     padding-right: 2px;
+}
+
+/***********************************/
+/* Suggestions */
+/***********************************/
+.user-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.suggestion p {
+    font-size: 17px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    height: 145px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px; 
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.user-card img {
+    border-radius: 50%;
+    width: 60px;  
+    height: 60px;
+}
+
+.user-card .name {
+    margin: 5px 0 3px; 
+    font-weight: bold;
+    font-size: 12px;  
+}
+
+.user-card .city {
+    font-size: 10px; 
+    color: #555;
 }
 
 /***********************************/

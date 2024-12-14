@@ -111,3 +111,45 @@ const feed = document.querySelector('.feed');
 if (feed) {
     feed.style.overflowY = 'auto'; 
 }
+
+const userList = document.getElementById('user-list');
+const suggestion = document.querySelector('#suggestion');
+
+async function fetchRandomUsers() {
+  try {
+    const response = await fetch('https://randomuser.me/api/?results=10');
+    const data = await response.json();
+
+    userList.innerHTML = '';
+
+    data.results.forEach((user) => {
+      const userCard = document.createElement('div');
+      userCard.className = 'user-card';
+
+      userCard.innerHTML = `
+        <img src="${user.picture.medium}" alt="${user.name.first} ${user.name.last}">
+        <div class="name">${user.name.first} ${user.name.last}</div>
+        <div class="city">${user.location.city}</div>
+      `;
+
+      userList.appendChild(userCard);
+    });
+
+    adjustUserGridHeight();
+  } catch (error) {
+    console.error('Error fetching random users:', error);
+    userList.innerHTML = '<p>Unable to load suggestions at this time.</p>';
+  }
+}
+
+function adjustUserGridHeight() {
+    const suggestionHeight = suggestion.offsetHeight;
+    const userGrid = document.querySelector('.user-grid');
+
+   
+    const availableHeight = suggestionHeight - 50; 
+
+    userGrid.style.maxHeight = `${availableHeight}px`;
+}
+
+fetchRandomUsers();
